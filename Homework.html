@@ -30,7 +30,7 @@
         <li>3rd</li>
       </ul>
 
-      <a href="https://s3.eu-west-1.amazonaws.com/eduflow-production/activity-resources/strive.school">This link goes to Strive School</a>
+      <a id = "kaka" href="https://s3.eu-west-1.amazonaws.com/eduflow-production/activity-resources/strive.school">This link goes to Strive School</a>
 
       <div>
         <p>This text is just for the exercise</p>
@@ -90,11 +90,12 @@
       */
 
       const changeUrls = function () {
-        let changeUrlsNode = document.querySelectorAll("a")
-          for( let newUrl of changeUrlsNode){
-            newUrl = changeUrlsNode.href = "google.com"
-          }
-        //
+        alert("itworks")
+        let changeUrlsNode = document.getElementById("kaka")
+          //for(i=0; i<changeUrlsNode;i++){
+            changeUrlsNode.href = "google.com"
+          
+            //
       };
 
       /* EXERCISE 5
