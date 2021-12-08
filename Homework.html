@@ -103,6 +103,12 @@
       */
 
       const addToTheSecond = function (content) {
+        let addToTheSecondNode = document.querySelectorAll("ul")[1]
+        let newList = document.createElement("li")
+        newList.innerText = "i am new"
+        let parentNode = addToTheSecondNode
+        parentNode.appendChild(newList)
+
         //
       };
 
