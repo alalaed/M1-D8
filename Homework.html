@@ -8,7 +8,9 @@
     </style>
   </head>
   <body>
+    <button id="toggle-button"onclick="changePcontent()">Change Heading</button>
     <div>
+      
       <h1>This is the title of the page</h1>
       <h2>This is the subtitle of the page</h2>
     </div>
@@ -52,6 +54,11 @@
       */
 
       const changeTitle = function (newTitle) {
+        alert ( "itworks")
+        let newTitleNode = document.getElementsByTagName("h1")
+          for ( let newTitle of newTitleNode){
+            newTitle.innerText = "This is my new Title"
+          }
         //
       };
 
@@ -60,6 +67,8 @@
       */
 
       const addClassToTitle = function () {
+        let newClass = document.querySelector("h1")
+        newClass.classList.toggle("myheading")
         //
       };
 
@@ -68,6 +77,12 @@
       */
 
       const changePcontent = function () {
+        alert ( "itworks")
+        let changePNode = document.getElementsByTagName("div")
+        let pContent = document.querySelectorAll("div p")
+          for(let newP of pContent){
+            newP.innerText = "this is the new p "
+          }
         //
       };
 
