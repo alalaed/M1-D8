@@ -8,7 +8,7 @@
     </style>
   </head>
   <body>
-    <button id="toggle-button"onclick="firstUlDisappear()">Change Heading</button>
+    <button id="toggle-button"onclick="paintItGreen()">Change Heading</button>
     <div>
       
       <h1>This is the title of the page</h1>
@@ -30,7 +30,7 @@
         <li>3rd</li>
       </ul>
 
-      <a id = "kaka" href="https://s3.eu-west-1.amazonaws.com/eduflow-production/activity-resources/strive.school">This link goes to Strive School</a>
+      <a id = "link" href="https://s3.eu-west-1.amazonaws.com/eduflow-production/activity-resources/strive.school">This link goes to Strive School</a>
 
       <div>
         <p>This text is just for the exercise</p>
@@ -91,7 +91,7 @@
 
       const changeUrls = function () {
         alert("itworks")
-        let changeUrlsNode = document.getElementById("kaka")
+        let changeUrlsNode = document.getElementById("link")
           //for(i=0; i<changeUrlsNode;i++){
             changeUrlsNode.href = "google.com"
           
@@ -130,8 +130,8 @@
       */
 
       const firstUlDisappear = function () {
-        let firstUL = document.querySelectorAll("ul")[0]
-        firstUL.toggle("hidden")
+        let firstUL = document.getElementById("firstList")
+        firstUL.style.visibility = "hidden"
         //
       };
 
@@ -140,6 +140,11 @@
       */
 
       const paintItGreen = function () {
+        let allUL = document.getElementsByTagName("ul")
+          for( i=0; i<allUL.length; i++){
+            allUL[i].style.backgroundColor = "green"
+
+          }
         //
       };
 
