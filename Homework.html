@@ -8,7 +8,7 @@
     </style>
   </head>
   <body>
-    <button id="toggle-button"onclick="changePcontent()">Change Heading</button>
+    <button id="toggle-button"onclick="changeUrls()">Change Heading</button>
     <div>
       
       <h1>This is the title of the page</h1>
@@ -78,7 +78,6 @@
 
       const changePcontent = function () {
         alert ( "itworks")
-        let changePNode = document.getElementsByTagName("div")
         let pContent = document.querySelectorAll("div p")
           for(let newP of pContent){
             newP.innerText = "this is the new p "
@@ -91,6 +90,10 @@
       */
 
       const changeUrls = function () {
+        let changeUrlsNode = document.querySelectorAll("a")
+          for( let newUrl of changeUrlsNode){
+            newUrl = changeUrlsNode.href = "google.com"
+          }
         //
       };
 
