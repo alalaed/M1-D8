@@ -8,7 +8,7 @@
     </style>
   </head>
   <body>
-    <button id="toggle-button"onclick="changeUrls()">Change Heading</button>
+    <button id="toggle-button"onclick="addParagraph()">Change Heading</button>
     <div>
       
       <h1>This is the title of the page</h1>
@@ -117,6 +117,11 @@
       */
 
       const addParagraph = function (content) {
+        let addP = document.querySelectorAll("div")[1]
+        let newParagraph = document.createElement("p")
+        newParagraph.innerText = "i am new paragraph"
+        let parentNode = addP
+        parentNode.appendChild(newParagraph)
         //
       };
 
