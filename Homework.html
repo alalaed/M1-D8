@@ -12,7 +12,7 @@
     
     <div>
       
-      <h1 onclick="makeItClickable(event)">This is the title of the page</h1>
+      <h1 id="title">This is the title of the page</h1>
       <h2>This is the subtitle of the page</h2>
     </div>
 
@@ -154,11 +154,15 @@
       */
 
       const makeItClickable = function (e) {
-        let changeHeadingColor = document.querySelectorAll("h1")
-        changeHeadingColor.e.target.style.color = "blue"
-         
-        //
+        let changeHeadingColor = document.getElementById("title")
+        changeHeadingColor.onclick = changeTextColor
       };
+
+      const changeTextColor= function(e){
+        e.target.style.color = "blue"
+      }
+
+      makeItClickable(event)
 
       /* EXERCISE 10
        Change the footer text with something else when the user clicks on it.
