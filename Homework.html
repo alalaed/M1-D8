@@ -8,7 +8,7 @@
     </style>
   </head>
   <body>
-    <button id="toggle-button"onclick="addParagraph()">Change Heading</button>
+    <button id="toggle-button"onclick="firstUlDisappear()">Change Heading</button>
     <div>
       
       <h1>This is the title of the page</h1>
@@ -130,6 +130,8 @@
       */
 
       const firstUlDisappear = function () {
+        let firstUL = document.querySelectorAll("ul")[0]
+        firstUL.toggle("hidden")
         //
       };
 
